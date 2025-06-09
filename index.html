@@ -99,6 +99,7 @@
                 <article id="survey-results" class="space-y-6 sm:space-y-8">
                     <div class="info-card">
                         <h3 class="text-lg sm:text-xl font-semibold mb-3 text-center">설문 1: 생성형 AI 사용 빈도</h3>
+                        <!-- CHART SECTION: Generative AI Usage Frequency -->
                         <div class="chart-container w-full max-w-md sm:max-w-lg mx-auto h-64 sm:h-72 md:h-80">
                             <canvas id="surveyChart1"></canvas>
                         </div>
@@ -108,6 +109,7 @@
                     </div>
                     <div class="info-card">
                         <h3 class="text-lg sm:text-xl font-semibold mb-3 text-center">설문 2: 생성형 AI 답변 신뢰도</h3>
+                        <!-- CHART SECTION: Trustworthiness of Generative AI Answers -->
                         <div class="chart-container w-full max-w-md sm:max-w-lg mx-auto h-64 sm:h-72 md:h-80">
                             <canvas id="surveyChart2"></canvas>
                         </div>
@@ -117,6 +119,7 @@
                     </div>
                     <div class="info-card">
                         <h3 class="text-lg sm:text-xl font-semibold mb-3 text-center">설문 3: 생성형 AI 정보 확인 습관</h3>
+                        <!-- CHART SECTION: Habit of Verifying Information from Generative AI -->
                         <div class="chart-container w-full max-w-md sm:max-w-lg mx-auto h-64 sm:h-72 md:h-80">
                             <canvas id="surveyChart3"></canvas>
                         </div>
@@ -128,18 +131,33 @@
 
                 <article id="interview-results" class="mt-8 sm:mt-12 info-card">
                     <h3 class="text-lg sm:text-xl font-semibold mb-4 text-center">인터뷰 결과 요약</h3>
+                    
                     <div class="space-y-4 sm:space-y-6">
                         <div class="p-3 sm:p-4 border border-gray-200 rounded-md hover:shadow-lg transition-shadow">
                             <h4 class="font-semibold text-md sm:text-lg mb-1 accent-text">성연우 학생 인터뷰</h4>
                             <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
                                 생성형 AI의 정보 오류 가능성을 인식하고, 인간의 주체적인 판단이 중요하다는 비판적 시각이 드러난다. 또한 AI를 단순한 도우미가 아닌 교육과 탐구를 위한 도구로 적극 활용하려는 태도도 보인다. 이는 AI를 유용하게 활용하면서도 그 한계를 경계하고 책임감 있게 사용하려는 자세가 엿보인다는 점에서 의미 있다.
                             </p>
+                             <!-- WORD CLOUD IMAGE 2: Added based on user request -->
+                            <div class="w-full max-w-md mx-auto my-3">
+                                <img src="src/워드클라우드2.png" 
+                                     alt="성연우 학생 인터뷰 워드클라우드" 
+                                     class="w-full h-auto rounded-lg shadow-md"
+                                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0F2FE/2A62B6?text=워드클라우드2+이미지+오류'; this.alt='워드클라우드 이미지 로딩 실패'">
+                            </div>
                         </div>
                         <div class="p-3 sm:p-4 border border-gray-200 rounded-md hover:shadow-lg transition-shadow">
                             <h4 class="font-semibold text-md sm:text-lg mb-1 accent-text">박경은 학생 인터뷰</h4>
                             <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
                                 생성형 AI에 대한 높은 신뢰와 의존이 드러난다. 또한 AI 정보를 그대로 사용하지 않고 출처를 남겨야 한다는 책임감 있는 태도도 보인다. 이는 AI를 학습 도구로 적극 활용하면서도 윤리적 사용을 인식하고 있다는 점에서 의미 있다.
                             </p>
+                            <!-- WORD CLOUD IMAGE 1: Moved here based on user request -->
+                            <div class="w-full max-w-md mx-auto my-3">
+                                <img src="src/워드클라우드 1.png" 
+                                     alt="박경은 학생 인터뷰 워드클라우드" 
+                                     class="w-full h-auto rounded-lg shadow-md"
+                                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/E0F2FE/2A62B6?text=워드클라우드1+이미지+오류'; this.alt='워드클라우드 이미지 로딩 실패'">
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -262,13 +280,6 @@
                                 font: {
                                     size: 11
                                 },
-                                // 범례 항목이 너무 길 경우 줄바꿈 (Chart.js 기본 기능은 아님, 필요시 커스텀 필요)
-                                // formatter: function(value, legendItem) {
-                                //     const label = legendItem.text;
-                                //     if (Array.isArray(label)) return label; // 이미 배열이면 그대로 사용
-                                //     if (label.length > 10) return [label.substring(0,10), label.substring(10)];
-                                //     return label;
-                                // }
                             },
                             onHover: (event, legendItem, legend) => {
                                 legend.chart.canvas.style.cursor = 'pointer';
@@ -332,5 +343,6 @@
             document.getElementById('generationDate').textContent = formattedDate;
         }
     </script>
-    </body>
+    <!-- AI 생성 인포그래픽 종료. 모든 콘텐츠는 단일 HTML 파일 내에 포함됨. -->
+</body>
 </html>
